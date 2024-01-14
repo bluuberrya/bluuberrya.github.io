@@ -37,7 +37,7 @@
     </style>
 </head>
 <body>
-    <h1>Hello Everynyan</h1>
+    <h1>Welcome Peasants</h1>
 
     <h2>Below is the script for Ratatouille, enjoy</h2>
     <div id="scriptContainer">
@@ -48,7 +48,9 @@
         fetch('ratatouille.txt')
             .then(response => response.text())
             .then(text => {
-                document.getElementById('ratatouilleText').textContent = text;
+                text = text.replace(/\n/g, '<br>');
+
+                document.getElementById('ratatouilleText').innerHTML = text;
             })
             .catch(error => console.error('Error fetching Ratatouille script:', error));
     </script>
