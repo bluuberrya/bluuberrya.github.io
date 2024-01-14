@@ -28,9 +28,20 @@
 </head>
 <body>
     <h1>Welcome Peasants</h1>
-    <p>
-        bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong bing bong
-    </p>
-    <h2>BELLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</h2>
+
+    <h2>Below is the script for Ratatouille, enjoy</h2>
+    <p id="ratatouilleText"></p>
+
+    <script>
+        // Fetch the text from ratatouille.txt using JavaScript
+        fetch('ratatouille.txt')
+            .then(response => response.text())
+            .then(text => {
+                // Set the text content of the <p> tag
+                document.getElementById('ratatouilleText').textContent = text;
+            })
+            .catch(error => console.error('Error fetching Ratatouille script:', error));
+    </script>
+    
 </body>
 </html>
